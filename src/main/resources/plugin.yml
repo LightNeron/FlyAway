@@ -1,0 +1,4 @@
+name: FlyAway
+version: '${version}'
+main: me.lightneron.flyaway.FlyAway
+api-version: '1.18'
