@@ -3,8 +3,9 @@ plugins {
 }
 
 group = 'me.LightNeron'
-version = '0.1.0'
-
+version = '0.1.1'
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
 repositories {
     mavenCentral()
     maven {
@@ -15,10 +16,13 @@ repositories {
         name = "sonatype"
         url = "https://oss.sonatype.org/content/groups/public/"
     }
+    mavenCentral()
+    maven { url = "https://repo.codemc.org/repository/maven-public/" }
 }
 
 dependencies {
     compileOnly "io.papermc.paper:paper-api:1.18.2-R0.1-SNAPSHOT"
+    compileOnly "dev.jorel:commandapi-bukkit-core:9.3.0"
 }
 
 def targetJavaVersion = 17
